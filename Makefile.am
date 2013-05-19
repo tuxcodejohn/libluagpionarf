@@ -1,12 +1,12 @@
 ## Process this file with automake to produce Makefile.in
 
 # Build a libtool library, libhello.la for installation in libdir.
-lib_LTLIBRARIES = libluagpio.la
-libluagpio_la_SOURCES = gpionarf.c luaifac.c
-libluagpio_la_LDFLAGS = -version-info 1:0:0
+lib_LTLIBRARIES = libluagpionarf.la
+libluagpionarf_la_SOURCES = gpionarf.c luaifac.c
+libluagpionarf_la_CFLAGS  = $(LUASTUFF_CFLAGS)
+libluagpionarf_la_LDFLAGS = $(LUASTUFF_LIBS) -version-info 1:0:0 
 
-
-dist_noinst_SCRIPTS = gpiosample.lua
+# dist_noinst_SCRIPTS = gpiosample.lua
 
 
 dist-hook: ChangeLog
