@@ -4,6 +4,7 @@ AC_INIT(luaionarf, 0.1, john@tuxcode.org))
 dnl AC_CONFIG_AUX_DIR([build-aux])
 
 AM_INIT_AUTOMAKE([foreign no-dist-gzip dist-xz])
+LT_INIT
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
